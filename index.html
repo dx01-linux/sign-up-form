@@ -3,61 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sign-Up-form</title>
+    <title>Sign-up </title>
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/1758d25008.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <div id = 'aside'>
-            <div>
-                <img src="src/odin-lined.png" alt="logo" id = 'logoImg'>
-                <h1 id = 'logoFonts'> Odin </h1>
-            </div>
+    <h1> Test Form </h1>
+    <form id ='test' action = '#' method="get" onsubmit=" return validate()">
+        <!-- <div class = 'form-section'>
+            <label for="f-name">First Name</label>
+            <input type="text" id = 'f-name' name = 'fristName' required minlength="2">
         </div>
-        <div id ='main'>
-            <div id="header">
-                <p> 
-                    This is not a real service! You know you need something like this in your life to help you realize
-                    your deepest dreams. Sing Up <em>now</em> to get started.
-                </p>
-                <p>
-                    You <em>know</em> you want to. Let's do it!
-                </p>
-            </div>
-          
-            <form action="#" method="post">
-                <fieldset>
-                    <div>
-                        <label for="f-name">Frist-Name</label>
-                        <input type="text" id = 'f-name' name = 'fristName' placeholder="Eve">
-                    </div>
-                    <div>
-                        <label for="l-name">Last-Name</label>
-                        <input type="text" id="l-name" name = 'lastName' placeholder="Fogo">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="evafogo@gmail.com" required>
-                    </div>
-                    <div>
-                        <label for="phone#">Phone Number</label>
-                        <input type="text" id="phone#" name = 'phoneNumber' placeholder="(111)-111-1111" required>
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
-                    </div>
-                    <div>
-                        <label for="passwordConf">Confirm Password</label>
-                        <input type="text" id="passwordConf">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <input type="submit" value="Submit">
-                    <p>Already have an account? <em>Log in</em></p>
-                </fieldset>
-            </form>
+        <div class = 'form-section'>
+            <label for="l-name">Last Name</label>  
+            <input type="text" id ='l-name' name = 'lastName' required minlength="2">
+        </div> -->
+        <div class = 'form-section'>
+            <label for="email">Email</label>
+            <input 
+                type="email" 
+                id = 'email' 
+                name = 'text' 
+                required
+                autocomplete="off"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            >
         </div>
-    </div>
+        <!-- <div class = 'form-section'>
+            <label for="phone">Phone#</label>
+            <input type="tel" id = 'phone' name = 'phoneNumber' title = 'Format : ###-###-####'> 
+        </div> -->
+        <div class = 'form-section'>
+            <label for="password">Password</label>
+            <input type="password" id = 'password' name ='password'>
+        </div>
+        <div class = 'form-section'>
+            <label for="cPassword">Confirm Password</label>
+            <input type="password" id = 'cPassword' required>
+        </div>
+        <div class = 'form-section' id = 'last'>
+            <button type="submit"> Submit </button>
+        </div>
+    </form>
+
 </body>
 </html>
