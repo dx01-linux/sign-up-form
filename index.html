@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up </title>
     <link rel="stylesheet" href="index.css">
-    <script src="app.js" defer></script>
+    <!-- <script src="app.js" defer></script> -->
     <script src="https://kit.fontawesome.com/1758d25008.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1> Test Form </h1>
-    <form id ='validate' action = '#' method="get" novalidate>
-        <!-- <div class = 'form-section'>
-            <label for="f-name">First Name</label>
-            <input type="text" id = 'f-name' name = 'fristName' required minlength="2">
-        </div>
-        <div class = 'form-section'>
-            <label for="l-name">Last Name</label>  
-            <input type="text" id ='l-name' name = 'lastName' required minlength="2">
-        </div> -->
+    <form id ='validate' action = "second.html" method="get">
         <div class = 'form-section'>
             <label for="email">Email</label>
             <input 
@@ -27,16 +19,12 @@
                 name = 'text' 
                 required
                 autocomplete="off"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
             >
             <small class="error-msg-hide">
                 invalid email 
             </small>
         </div>
-        <!-- <div class = 'form-section'>
-            <label for="phone">Phone#</label>
-            <input type="tel" id = 'phone' name = 'phoneNumber' title = 'Format : ###-###-####'> 
-        </div> -->
         <div class = 'form-section'>
             <label for="password">Password</label>
             <input 
@@ -45,9 +33,10 @@
                 name ='password'
                 required
                 pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}"
+                title="8char , 1 specil , one upper case , one digit"
             >
             <small class="error-msg-hide">
-                8 char long , one special , one upper case , one digit 
+                8 char, 1 special , 1 upper case , 1 digit 
             </small>
         </div>
         <div class = 'form-section'>
@@ -57,6 +46,7 @@
                 id = 'cPassword' 
                 required
             >
+            <small class = 'error-msg-hide'>Password do not match</small>
         </div>
         <div class = 'form-section' id = 'last'>
             <button type="submit"> Submit </button>
