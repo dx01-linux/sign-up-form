@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1> Test Form </h1>
-    <form id ='validate' action = '#' method="get" novalidate>
+    <form id ='test' action = '#' method="get" onsubmit=" return validate()">
         <!-- <div class = 'form-section'>
             <label for="f-name">First Name</label>
             <input type="text" id = 'f-name' name = 'fristName' required minlength="2">
@@ -29,9 +29,6 @@
                 autocomplete="off"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             >
-            <small class="error-msg-hide">
-                invalid email 
-            </small>
         </div>
         <!-- <div class = 'form-section'>
             <label for="phone">Phone#</label>
@@ -44,17 +41,13 @@
                 id = 'password' 
                 name ='password'
                 required
-                pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}"
             >
-            <small class="error-msg-hide">
-                8 char long , one special , one upper case , one digit 
-            </small>
         </div>
         <div class = 'form-section'>
             <label for="cPassword">Confirm Password</label>
             <input 
                 type="password" 
-                id = 'cPassword' 
+                id = 'cPassword'
                 required
             >
         </div>

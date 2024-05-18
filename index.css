@@ -45,11 +45,11 @@ form {
         outline: 2px solid white;
         color : white;
     }
-    input:user-invalid {
+    .invalid {
         border: 1px solid lightcoral;
         outline: 3px solid lightcoral;
     }
-    input:user-valid {
+    .valid{
         border: 1px solid green;
         outline: 3px solid green;
         
@@ -73,3 +73,16 @@ h1 {
     color: blueviolet;
     margin-bottom: 10px;
 }
+
+.error-msg-hide , .error-msg-show {
+    margin-top: 5px;
+    font-size: 12px;
+    color: red;
+}
+.error-msg-hide {
+    opacity: 0;
+}
+.error-msg-show{
+    opacity: 1;
+}
+
